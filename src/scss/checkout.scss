@@ -1,0 +1,105 @@
+.checkout {
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    height: max-content;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+    .checkout__left {
+        .checkout__title {
+            margin-right: 10px;
+            padding: 10px;
+            border-bottom: 1px solid lightgray;
+        }
+        .checkout__ad {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .cartlist {
+            display: flex;
+            justify-content: flex-start;
+            height: max-content;
+            margin-top: 18px;
+            box-sizing: border-box;
+            @media (max-width:550px){
+                flex-direction: column;
+            }
+            .cartlist__image {
+                width: 300px;
+                margin-right: 25px;
+                img {
+                    max-height: 200px;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .cartlist__info {
+                margin-bottom: 15px;
+                margin-left: 15px;
+                width: calc(100% - 300px);
+                @media (max-width:550px){
+                    width: 100%;
+                }
+                .cartlist__title {
+                    font-weight: 800;
+                }
+                .cartlist__price {
+                    margin-top: 5px;
+                }
+                .cartlist__rating {
+                    display: flex;
+                }
+                button {
+                    background-color: #f0c14b;
+                    border: 1px solid;
+                    margin-top: 10px;
+                    border-color: #a88734 #9c7e31 #846a29;
+                    color: #111;
+                    cursor: pointer;
+                }
+            }
+        }
+        .emptycart {
+            padding: 8px 12px;
+        }
+    }
+    .checkout__right {
+        display: flex;
+        justify-content: center;
+        .subtotal {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            @media (max-width: 900px) {
+                width: 70%;
+                margin: 0 auto;
+                margin-top: 24px;
+            }
+            .subtotal__gift {
+                display: flex;
+                align-items: center;
+                input {
+                    margin-right: 5px;
+                }
+            }
+            button {
+                background-color: #f0c14b;
+                border-radius: 2px;
+                width: 100%;
+                height: 30px;
+                border: 1px solid;
+                margin-top: 10px;
+                border-color: #a88734 #9c7e31 #846a29;
+                color: #111;
+                cursor: pointer;
+            }
+        }
+    }
+}
